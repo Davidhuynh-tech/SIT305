@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "Task_4P.com"
+    namespace = "com.example.task_41c_quizapp"
     compileSdk {
         version = release(36) {
             minorApiLevel = 1
@@ -11,7 +11,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "Task_4P.com"
+        applicationId = "com.example.task_41c_quizapp"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -36,18 +36,6 @@ android {
 }
 
 dependencies {
-    implementation("androidx.core:core:1.13.1")
-    implementation("androidx.constraintlayout:constraintlayout:2.2.1")
-    implementation("androidx.activity:activity:1.10.1")
-    implementation("androidx.fragment:fragment:1.8.8")
-    implementation("androidx.recyclerview:recyclerview:1.4.0")
-    implementation("androidx.lifecycle:lifecycle-livedata:2.9.1")
-    implementation("androidx.lifecycle:lifecycle-viewmodel:2.9.1")
-    implementation("androidx.navigation:navigation-fragment:2.9.2")
-    implementation("androidx.navigation:navigation-ui:2.9.2")
-    implementation("androidx.room:room-runtime:2.7.2")
-    annotationProcessor("androidx.room:room-compiler:2.7.2")
-
     implementation(libs.appcompat)
     implementation(libs.material)
     testImplementation(libs.junit)

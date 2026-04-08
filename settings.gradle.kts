@@ -22,6 +22,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "4.1P"
+rootProject.name = "Task_4.1C_QuizApp"
 include(":app")
  

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="top|center_horizontal">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="381dp"
+        android:layout_height="53dp"
+        android:indeterminate="false" />
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Welcome your name!"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/progressText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1/5"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Android question title:"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/questionText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Question details go here"
+        android:textSize="14sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/option1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="40dp"
+        android:text="Answer"
+        android:textColor="#000000"
+        app:backgroundTint="#D0D0D0" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/option2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="40dp"
+        android:text="Answer"
+        android:textColor="#000000"
+        app:backgroundTint="#D0D0D0" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/option3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="40dp"
+        android:text="Answer"
+        android:textColor="#000000"
+        app:backgroundTint="#D0D0D0" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/option4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="40dp"
+        android:text="Answer"
+        android:textColor="#000000"
+        app:backgroundTint="#D0D0D0" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="40dp"
+        android:text="Submit"
+        android:textColor="#000000"
+        app:backgroundTint="#D0D0D0" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/nextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="40dp"
+        android:text="Next"
+        android:visibility="gone"
+        android:textColor="#000000"
+        app:backgroundTint="#D0D0D0" />
+</LinearLayout>
