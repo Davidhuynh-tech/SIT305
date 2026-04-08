@@ -1,8 +1,25 @@
 <resources>
-    <string name="app_name">Unit Converter</string>
-    <string name="action_settings">Settings</string>
-    <string name="first_fragment_label">Unit Converter</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <string name="app_name">Event Planner</string>
+    <string name="events">Events</string>
+    <string name="add_event">Add Event</string>
+    <string name="save_event">Save Event</string>
+    <string name="update_event">Update Event</string>
+    <string name="title">Title</string>
+    <string name="category">Category</string>
+    <string name="location">Location</string>
+    <string name="date_time">Date &amp; Time</string>
+    <string name="select_date_time">Select date &amp; time</string>
+    <string name="no_events">No upcoming events yet.</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="event_saved">Event saved</string>
+    <string name="event_updated">Event updated</string>
+    <string name="event_deleted">Event deleted</string>
+    <string name="title_required">Title is required</string>
+    <string name="date_required">Date is required</string>
+    <string name="past_date_error">Please pick a future date/time</string>
+    <string name="edit_event">Edit Event</string>
+    <string name="confirm_delete_title">Delete event?</string>
+    <string name="confirm_delete_message">This event will be permanently removed.</string>
+    <string name="cancel">Cancel</string>
 </resources>
