@@ -33,12 +33,6 @@ App label (launcher name): **Android Developer Quiz** (`res/values/strings.xml`)
 
 Under `app/src/main/java/Task_4P/` there is additional **event-related** Java (e.g. `Event`, UI pieces). That code uses a **different package** from the quiz app’s `applicationId` / manifest launcher. Treat it as a separate task or work-in-progress unless you wire it into the manifest, Gradle dependencies, and navigation yourself.
 
-## Tests
-
-- Unit tests: `app/src/test/java/`
-- Instrumented tests: `app/src/androidTest/java/`
-
-Run tests from Android Studio (**Run tests** on a package/class) or with Gradle test tasks for the `app` module.
 
 ## Project metadata
 
