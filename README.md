@@ -19,20 +19,29 @@ The app entry point declared in `AndroidManifest.xml` is `com.example.task_41c_q
 
 ## What’s in the app (quiz)
 
-| Piece | Role |
-|--------|------|
-| `MainActivity` | Collects the user’s name (saved in `SharedPreferences`) and starts the quiz. |
-| `QuizActivity` | Presents questions and records the score. |
-| `ResultsActivity` | Shows the outcome after the quiz. |
-| `Question` | Model for quiz items. |
+| File | Role |
+|------|------|
+| `MainActivity.java` | Collects the user’s name (saved in `SharedPreferences`) and starts the quiz. |
+| `QuizActivity.java` | Presents questions and records the score. |
+| `ResultsActivity.java` | Shows the outcome after the quiz. |
+| `Question.java` | Model for quiz items. |
 
-Package: `com.example.task_41c_quizapp`  
-App label (launcher name): **Android Developer Quiz** (`res/values/strings.xml`).
+**Package:** `com.example.task_41c_quizapp`  
+**App label:** **Android Developer Quiz** (`res/values/strings.xml`).
 
-## Other source in this repo
+## What’s in the app (Task 4P — events)
 
-Under `app/src/main/java/Task_4P/` there is additional **event-related** Java (e.g. `Event`, UI pieces). That code uses a **different package** from the quiz app’s `applicationId` / manifest launcher. Treat it as a separate task or work-in-progress unless you wire it into the manifest, Gradle dependencies, and navigation yourself.
+Event-related code lives under `app/src/main/java/Task_4P/` as **Java** (`.java`) sources. It targets a separate **events** feature (Room entity, list UI, navigation shell). It is **not** the launcher flow in the current manifest unless you point `AndroidManifest.xml` at `Task_4P.com.MainActivity` and align Gradle resources/deps.
 
+| File | Role |
+|------|------|
+| `Task_4P/com/MainActivity.java` | Host activity: `NavHostFragment` + bottom navigation wired to the nav graph. |
+| `Task_4P/com/data/Event.java` | Room `@Entity` for stored events (title, category, location, date/time). |
+| `Task_4P/com/data/AppDatabase.java` | Room database singleton (`events_db`) exposing the DAO. |
+| `Task_4P/com/ui/EventListFragment.java` | Fragment that shows the event list (RecyclerView, dialogs, `EventViewModel`). |
+| `Task_4P/com/ui/EventAdapter.java` | `RecyclerView.Adapter` for event rows (edit/delete actions). |
+
+**Package roots:** `Task_4P.com`, `Task_4P.com.data`, `Task_4P.com.ui`.
 
 ## Project metadata
 
