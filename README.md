@@ -1,6 +1,6 @@
 # SIT305 — Android Developer Quiz
 
-Native Android app (**Java**) built with Gradle. The launcher experience is the **Task 4.1C Quiz** flow: enter a name, take a short quiz, then view results.
+Native Android app (**Java**) built with Gradle. The launcher experience is the **Task 3.1C Quiz** flow: enter a name, take a short quiz, then view results.
 
 ## Requirements
 
