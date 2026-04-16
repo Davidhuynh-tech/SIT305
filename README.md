@@ -29,20 +29,6 @@ The app entry point declared in `AndroidManifest.xml` is `com.example.task_41c_q
 **Package:** `com.example.task_41c_quizapp`  
 **App label:** **Android Developer Quiz** (`res/values/strings.xml`).
 
-## What’s in the app 
-
-Event-related code lives under `app/src/main/java/Task_4P/` as **Java** (`.java`) sources. It targets a separate **events** feature (Room entity, list UI, navigation shell). It is **not** the launcher flow in the current manifest unless you point `AndroidManifest.xml` at `Task_4P.com.MainActivity` and align Gradle resources/deps.
-
-| File | Role |
-|------|------|
-| `Task_4P/com/MainActivity.java` | Host activity: `NavHostFragment` + bottom navigation wired to the nav graph. |
-| `Task_4P/com/data/Event.java` | Room `@Entity` for stored events (title, category, location, date/time). |
-| `Task_4P/com/data/AppDatabase.java` | Room database singleton (`events_db`) exposing the DAO. |
-| `Task_4P/com/ui/EventListFragment.java` | Fragment that shows the event list (RecyclerView, dialogs, `EventViewModel`). |
-| `Task_4P/com/ui/EventAdapter.java` | `RecyclerView.Adapter` for event rows (edit/delete actions). |
-
-**Package roots:** `Task_4P.com`, `Task_4P.com.data`, `Task_4P.com.ui`.
-
 ## Project metadata
 
 | Item | Value |
