@@ -1,41 +1,61 @@
-# SIT305 — Android Developer Quiz
+# Android Developer Quiz - SIT305 Task
 
-Native Android app (**Java**) built with Gradle. The launcher experience is the **Task 3.1C Quiz** flow: enter a name, take a short quiz, then view results.
+This project implements the **Android Developer Quiz** app using native Android (**Java**) and Gradle.
+
+## Overview
+
+The app follows a simple quiz flow:
+
+- Enter user name
+- Start quiz
+- Answer questions
+- View result summary
+
+It demonstrates core Android development with Activities, model classes, and local preference storage.
+
+## Implemented Features
+
+- **Main screen (`MainActivity`)**
+  - Captures user name
+  - Stores name using `SharedPreferences`
+  - Navigates to quiz screen
+
+- **Quiz screen (`QuizActivity`)**
+  - Displays quiz questions
+  - Accepts user answers
+  - Calculates score
+
+- **Result screen (`ResultsActivity`)**
+  - Displays final score/result to the user
+
+## Tech Stack
+
+- Java
+- Android SDK
+- Gradle (Kotlin DSL)
+- SharedPreferences
+
+## Project Structure
+
+`app/src/main/java/com/example/task_41c_quizapp/`
+
+- `MainActivity.java` - Name input + start quiz
+- `QuizActivity.java` - Question display + scoring logic
+- `ResultsActivity.java` - Final result UI
+- `Question.java` - Quiz data model
 
 ## Requirements
 
-- **Android Studio** (recommended: version aligned with AGP **9.0.1** in this repo)
-- **JDK 11** (matches `compileOptions` in `app/build.gradle.kts`)
-- **Android SDK**: `compileSdk` / `targetSdk` **36**, `minSdk` **24**
+- Android Studio (compatible with AGP `9.0.1`)
+- JDK 11
+- Android SDK:
+  - `compileSdk` 36
+  - `targetSdk` 36
+  - `minSdk` 24
 
-## Open and run
+## How to Run
 
-1. Open the project folder in Android Studio (`File → Open` → select this directory).
-2. Let Gradle sync finish.
-3. Choose a device or emulator (API 24+).
-4. Click **Run** (or **Shift+F10**).
-
-The app entry point declared in `AndroidManifest.xml` is `com.example.task_41c_quizapp.MainActivity`.
-
-## What’s in the app (quiz)
-
-| File | Role |
-|------|------|
-| `MainActivity.java` | Collects the user’s name (saved in `SharedPreferences`) and starts the quiz. |
-| `QuizActivity.java` | Presents questions and records the score. |
-| `ResultsActivity.java` | Shows the outcome after the quiz. |
-| `Question.java` | Model for quiz items. |
-
-**Package:** `com.example.task_41c_quizapp`  
-**App label:** **Android Developer Quiz** (`res/values/strings.xml`).
-
-## Project metadata
-
-| Item | Value |
-|------|--------|
-| Gradle root name | `Task_4.1C_QuizApp` (`settings.gradle.kts`) |
-| Application ID | `com.example.task_41c_quizapp` |
-| Version | `1.0` (`versionName`), `versionCode` **1** |
-
----
-
+1. Open the project in Android Studio.
+2. Wait for Gradle sync to complete.
+3. Select an emulator/device (API 24+).
+4. Click **Run** (`Shift+F10`).
