@@ -29,7 +29,7 @@ The app entry point declared in `AndroidManifest.xml` is `com.example.task_41c_q
 **Package:** `com.example.task_41c_quizapp`  
 **App label:** **Android Developer Quiz** (`res/values/strings.xml`).
 
-## What’s in the app (Task 4P — events)
+## What’s in the app 
 
 Event-related code lives under `app/src/main/java/Task_4P/` as **Java** (`.java`) sources. It targets a separate **events** feature (Room entity, list UI, navigation shell). It is **not** the launcher flow in the current manifest unless you point `AndroidManifest.xml` at `Task_4P.com.MainActivity` and align Gradle resources/deps.
 
@@ -53,4 +53,3 @@ Event-related code lives under `app/src/main/java/Task_4P/` as **Java** (`.java`
 
 ---
 
-*Course / submission: SIT305.*
