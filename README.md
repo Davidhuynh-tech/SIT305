@@ -139,11 +139,7 @@ This project now includes a backend provider using **OpenAI (ChatGPT)**.
 cd backend
 ```
 
-2. Copy `.env.example` to `.env` and set your key:
-
-```powershell
-copy .env.example .env
-```
+2. Copy set your key in .env:
 
 Edit `.env`:
 
