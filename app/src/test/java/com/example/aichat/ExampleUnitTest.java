@@ -1,4 +1,4 @@
-package com.example.lostandfound;
+package com.example.aichat;
 
 import org.junit.Test;
 

@@ -22,6 +22,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "LostAndFound"
+rootProject.name = "AiChat"
 include(":app")
  

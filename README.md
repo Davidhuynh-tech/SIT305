@@ -1,76 +1,103 @@
-# LostAndFound Android App
+# AiChat - Task 8.1 LLM ChatBot
 
-A fragment-based Android app built for the SIT305 Lost and Found task.  
-Users can post lost/found items, upload an image, filter posts by category, and remove posts after items are recovered.
+This Android app implements the Credit Task 8.1 requirements:
 
-## Features
-
-- Home screen with navigation to:
-  - `Create a New Advert`
-  - `Show All Lost & Found Items`
-- Add post flow:
-  - Post type: Lost or Found
-  - Required fields: Name, Phone, Date & Time, Location
-  - Optional field: Description
-  - Category selection
-  - Required image upload from device storage
-- Date/time handling:
-  - Date picker then time picker
-  - Past date/time is rejected (future time only)
-- Phone validation:
-  - Exactly 10 digits only (`0-9`)
-- List screen:
-  - Displays saved posts with relative posting time
-  - Category filter (All, Electronics, Pets, Wallets, Keys, Documents, Other)
-- Remove screen:
-  - Shows post details and image
-  - Allows deleting a selected post
-- Local persistence:
-  - Room Database (no `SQLiteOpenHelper`)
+- Username login screen
+- Chat interface after login
+- LLM chatbot integration
+- Message timestamps on each chat bubble
+- Persistent chat history using Room (SQLite)
 
 ## Tech Stack
 
-- Java
-- AndroidX Fragments + Navigation Component
-- Room Database
-- ViewBinding
-- Material Components
+- Language: Java
+- UI: XML + ViewBinding + RecyclerView
+- Database: Room 
+- Architecture: Android App -> Backend API -> LLM API (OpenAI)
+- Networking: OkHttp
+
+## Setup
+
+1. Open the project in Android Studio.
+2. Configure your backend base URL in `~/.gradle/gradle.properties`:
+
+```
+BACKEND_BASE_URL=http://10.0.2.2:8080
+```
+
+3. Build and run on emulator/device.
+
+## Backend Setup (Required)
+
+1. Go to backend folder:
+
+```bash
+cd backend
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Create/update root `.env` in project root:
+
+```env
+OPENAI_API_KEY=your_openai_api_key
+OPENAI_MODEL=gpt-4o-mini
+PORT=8080
+```
+
+4. Start backend server:
+
+```bash
+npm start
+```
+
+5. Verify backend health:
+
+```bash
+curl http://localhost:8080/health
+```
+
+Your backend should expose:
+
+- `POST /chat`
+- Request body:
+
+```json
+{
+  "username": "student",
+  "message": "Hello"
+}
+```
+
+- Response body:
+
+```json
+{
+  "reply": "Hi! How can I help?"
+}
+```
+
+## How It Works
+
+- User enters username on login screen.
+- After login, chat UI is shown.
+- Username session is stored locally in `SharedPreferences` file `user_session_prefs`.
+- Sent and received messages are stored in Room database table `chat_messages`.
+- Existing chat messages are loaded on startup.
+- Each message bubble shows its timestamp.
 
 ## Project Structure
 
-- `app/src/main/java/com/example/lostandfound/`
-  - `MainActivity.java` (host activity)
-  - `HomeFragment.java`
-  - `AddItemFragment.java`
-  - `ItemListFragment.java`
-  - `RemoveItemFragment.java`
-- `app/src/main/java/com/example/lostandfound/storage/`
-  - `LostFoundItem.java` (`@Entity`)
-  - `LostFoundItemDao.java` (`@Dao`)
-  - `LostFoundDatabase.java` (`@Database`)
-- `app/src/main/res/navigation/nav_graph.xml`
-
-## Navigation Flow
-
-1. Home -> Create a New Advert
-2. Home -> Show All Lost & Found Items
-3. List item click -> Remove Item screen
-4. Save post -> Returns to Home
-
-## How to Run
-
-1. Open project in Android Studio.
-2. Let Gradle sync.
-3. Start an emulator or connect a physical device.
-4. Run the `app` module.
-
-## Testing Checklist
-
-- Create a post with all required fields and image -> post saves.
-- Try saving with missing required fields -> validation message appears.
-- Try picking a past time -> blocked.
-- Enter non-10-digit phone -> blocked.
-- Filter list by category -> list updates correctly.
-- Open a post from list -> details and image are shown.
-- Remove a post -> item disappears from list.
-
+- `app/src/main/java/com/example/aichat/MainActivity.java` - NavHost activity
+- `app/src/main/java/com/example/aichat/FirstFragment.java` - login screen
+- `app/src/main/java/com/example/aichat/SecondFragment.java` - chat screen
+- `app/src/main/java/com/example/aichat/data/` - Room Entity, DAO, Database
+- `app/src/main/java/com/example/aichat/network/ChatbotService.java` - backend API calls
+- `app/src/main/java/com/example/aichat/ui/ChatAdapter.java` - RecyclerView adapter
+- `app/src/main/res/layout/` - login/chat and message item layouts
+- `app/src/main/res/navigation/nav_graph.xml` - fragment navigation flow
+- `backend/src/server.js` - Express backend + OpenAI integration
