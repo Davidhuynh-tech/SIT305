@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.lostandfound.HomeFragment"
+        android:label="@string/home_fragment_label"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_addItemFragment"
+            app:destination="@id/addItemFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_itemListFragment"
+            app:destination="@id/itemListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_mapItemsFragment"
+            app:destination="@id/mapItemsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addItemFragment"
+        android:name="com.example.lostandfound.AddItemFragment"
+        android:label="@string/add_item_fragment_label"
+        tools:layout="@layout/fragment_add_item">
+
+        <action
+            android:id="@+id/action_addItemFragment_to_itemListFragment"
+            app:destination="@id/itemListFragment" />
+        <action
+            android:id="@+id/action_addItemFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemListFragment"
+        android:name="com.example.lostandfound.ItemListFragment"
+        android:label="@string/item_list_fragment_label"
+        tools:layout="@layout/fragment_item_list">
+
+        <action
+            android:id="@+id/action_itemListFragment_to_addItemFragment"
+            app:destination="@id/addItemFragment" />
+        <action
+            android:id="@+id/action_itemListFragment_to_removeItemFragment"
+            app:destination="@id/removeItemFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/removeItemFragment"
+        android:name="com.example.lostandfound.RemoveItemFragment"
+        android:label="@string/remove_item_fragment_label"
+        tools:layout="@layout/fragment_remove_item">
+        <action
+            android:id="@+id/action_removeItemFragment_to_itemListFragment"
+            app:destination="@id/itemListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mapItemsFragment"
+        android:name="com.example.lostandfound.MapItemsFragment"
+        android:label="@string/map_fragment_label"
+        tools:layout="@layout/fragment_map_items" />
+</navigation>
