@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDE3CC"
+    android:fillViewport="true"
+    tools:context=".AnalyzeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/button_menu"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Menu"
+                    android:src="@android:drawable/ic_menu_sort_by_size"
+                    android:tint="#2E2E2E" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/button_settings"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Profile"
+                    android:src="@android:drawable/ic_menu_myplaces"
+                    android:tint="#2E2E2E" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_start_prompt"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="@string/start_prompt"
+                android:textColor="#333333"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/panel_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_input_panel"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/input_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:background="@drawable/bg_input_box"
+                    android:gravity="top"
+                    android:hint="@string/input_hint"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:padding="12dp"
+                    android:textColor="#2E2E2E"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/button_upload"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_input_box"
+                    android:text="@string/upload_message"
+                    android:textAllCaps="false"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/panel_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/text_imported_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_message_chip"
+                    android:paddingHorizontal="14dp"
+                    android:paddingVertical="8dp"
+                    android:text="@string/imported_message"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_score"
+                    android:gravity="center"
+                    android:paddingVertical="12dp"
+                    android:text="@string/scam_score"
+                    android:textColor="#1E1E1E"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_risk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_risk"
+                    android:gravity="center"
+                    android:paddingVertical="12dp"
+                    android:text="@string/risk_level"
+                    android:textColor="#1E1E1E"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_reasons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_reasoning"
+                    android:gravity="start"
+                    android:padding="12dp"
+                    android:text="@string/reasoning_why_scam"
+                    android:textColor="#2E2E2E"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_suggested_action"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_suggested"
+                    android:gravity="start"
+                    android:padding="12dp"
+                    android:text="@string/suggested_action"
+                    android:textColor="#2E2E2E"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_llm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#505050"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_home_spacer"
+                android:layout_width="match_parent"
+                android:layout_height="160dp" />
+
+            <Button
+                android:id="@+id/button_main_import"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/bg_bottom_button"
+                android:text="@string/import_button"
+                android:textAllCaps="false"
+                android:textColor="#4A4A4A"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

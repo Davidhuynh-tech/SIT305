@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">ScamGuard</string>
+    <string name="action_settings">Settings</string>
+    <string name="first_fragment_label">ScamGuard Analyzer</string>
+    <string name="second_fragment_label">Analysis History</string>
+    <string name="start_prompt">How can I help you today?</string>
+    <string name="input_hint">Input messages…</string>
+    <string name="upload_message">Upload Message from File or Images</string>
+    <string name="import_button">User Messages Import</string>
+    <string name="imported_message">Imported message</string>
+    <string name="scam_score">Scam Score</string>
+    <string name="risk_level">Risk Level</string>
+    <string name="reasoning_why_scam">Reasoning why it\'s a scam</string>
+    <string name="suggested_action">Suggested Action</string>
+    <string name="upload_not_ready">Upload from file/image is coming soon.</string>
+    <string name="llama_on">Llama2 analysis ON</string>
+    <string name="llama_off">Llama2 analysis OFF (local only)</string>
+    <string name="paste_message_prompt">Please paste a message first.</string>
+    <string name="login_required_prompt">Please login before analyzing messages.</string>
+    <string name="auth_title">Account</string>
+    <string name="current_user">Current user: %1$s</string>
+    <string name="no_user">Not logged in</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button">Login</string>
+    <string name="register_button">Register</string>
+    <string name="logout_button">Logout</string>
+    <string name="history_title">Analysis History</string>
+    <string name="history_empty">No analysis history yet for this user.</string>
+    <string name="clear_history">Clear History</string>
+    <string name="back_to_analyzer">Back to analyzer</string>
+    <string name="auth_missing_fields">Please enter username and password.</string>
+    <string name="auth_register_success">Registration successful. You are now logged in.</string>
+    <string name="auth_register_exists">Username already exists.</string>
+    <string name="auth_login_success">Login successful.</string>
+    <string name="auth_login_failed">Invalid username or password.</string>
+    <string name="auth_logout_success">Logged out.</string>
+    <string name="profile_title">Profile</string>
+    <string name="profile_login_register">Login / Register</string>
+    <string name="profile_logout">Logout</string>
+    <string name="profile_logged_in_as">Logged in as %1$s</string>
+    <string name="profile_not_logged_in">Not logged in</string>
+    <string name="history_cleared">History cleared for current user.</string>
+    <string name="history_login_required">Please login to view history.</string>
+    <string name="about_title">ScamGuard prototype notes</string>
+    <string name="about_body">This prototype demonstrates:
+\n• Prompt-to-response AI flow
+\n• On-device risk analysis
+\n• Optional Llama2 explanation via Ollama
+\n• Safety refusal for sensitive requests
+\n• Android 16 compatible back navigation through Navigation component</string>
+</resources>
