@@ -18,7 +18,7 @@ If these collections do not exist, the backend creates them on startup.
 
 ## Setup
 
-1. Copy `.env.example` to `.env`
+1. Create `.env`
 2. Fill in your MongoDB settings in `.env`
 3. Install dependencies:
    - `npm install`
